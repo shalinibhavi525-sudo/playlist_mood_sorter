@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Playlist Mood Sorter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎶 Playlist Mood Sorter</h1>
+        <form action="/add" method="post">
+            <label>Song Name:</label><br>
+            <input type="text" name="song" required><br><br>
+            <label>Lyrics (1-2 lines):</label><br>
+            <textarea name="lyrics" rows="3" cols="40" required></textarea><br><br>
+            <button type="submit">Analyze Mood</button>
+        </form>
+        <br>
+        <a href="/stats">📊 View Stats</a>
+    </div>
+</body>
+</html>
